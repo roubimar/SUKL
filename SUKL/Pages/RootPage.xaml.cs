@@ -30,7 +30,8 @@ namespace SUKL.Pages
 
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem is MenuItem item)
+            var item = e.SelectedItem as MenuItem;
+            if (item == null)
             {
                 mainPage.PopToRootAsync();
                 mainPage.PushAsync((ContentPage)Activator.CreateInstance((Type)item.CommandParameter));
