@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:SUKL.Pages.ContentPages"
+             x:Class="SUKL.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="validPersonTemplate">
+                <ViewCell>
+                    <Label Text="{Binding Text}" HorizontalTextAlignment="End" BackgroundColor="Green"/>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="invalidPersonTemplate">
+                <ViewCell>
+                    <Label Text="{Binding Text}" HorizontalTextAlignment="Start" BackgroundColor="Red"/>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

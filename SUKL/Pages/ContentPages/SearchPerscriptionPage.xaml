@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:SUKL.Pages.ContentPages"
+             x:Class="SUKL.Pages.ContentPages.SearchPerscriptionPage"
+             Title="Vyhledat recept">
+    <StackLayout>
+
+        <Entry x:Name="IdEntry" Text="" Placeholder="Zadejte ID" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Button x:Name="SearchButton" Text="Vyhledat" HorizontalOptions="Center" />
+            <Button x:Name="QrButton" Text="Načíst QR" HorizontalOptions="Center"/>
+            <Button x:Name="EanButton" Text="Načíst EAN" HorizontalOptions="Center"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

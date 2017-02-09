@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:SUKL.Pages.ContentPages"
+             xmlns:ex="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="SUKL.Pages.ContentPages.PrescriptionsPage"
+             Title="Seznam receptů">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:CustomTemplateSelector x:Key="customDataTemplateSelector"
+                    ValidTemplate="{StaticResource validPersonTemplate}"
+                    InvalidTemplate="{StaticResource invalidPersonTemplate}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="F" Priority="1"/>
+        <ToolbarItem Text="H" Priority="2"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Prescriptions}" ItemTemplate="{StaticResource customDataTemplateSelector}"/>
+            <Button Command="{Binding AddItemCommand}" Text="Přidat item"/>
+            <TimePicker x:Name="time" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
