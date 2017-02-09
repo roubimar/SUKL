@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 using Foundation;
 using UIKit;
@@ -23,6 +26,7 @@ namespace SUKL.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            MobileCenter.Configure("f077abb5-c902-466f-9a82-e844a122902f");
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
